@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<ImageListing>
+	<graphic>graphics/Interface/Buttons/button.png</graphic>
+	<graphic>graphics/Interface/Buttons/stat.png</graphic>
+	<graphic>graphics/Interface/Buttons/largebutton.png</graphic>
+	<graphic>graphics/Interface/Buttons/radiobutton.png</graphic>
+</ImageListing>
