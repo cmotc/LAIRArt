@@ -1,6 +1,8 @@
 #! /bin/sh
 # Configure your paths and filenames
 SOURCEBINPATH=.
+SOURCEBIN=lair
+SOURCEBINDEX=lair-index-resources
 SOURCEDOC=README.md
 SRCFOLDER=vaLAIR-data
 DEBFOLDER=valair-data
@@ -23,7 +25,7 @@ cd $DEBFOLDERNAME
 dh_make -s --indep --createorig 
 
 mkdir -p debian/tmp
-cp -R share debian/tmp
+cp -R bin share debian/tmp
 
 # Remove make calls
 grep -v makefile debian/rules > debian/rules.new 
@@ -31,6 +33,8 @@ mv debian/rules.new debian/rules
 
 # debian/install must contain the list of scripts to install 
 # as well as the target directory
+echo bin/$SOURCEBIN usr/bin >> debian/install
+echo bin/$SOURCEBINDEX usr/bin >> debian/install
 echo $SOURCEDOC usr/share/doc/$DEBFOLDER >> debian/install
 for d in share/lair/*; do
     if [ -d $d ]; then
