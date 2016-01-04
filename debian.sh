@@ -41,7 +41,13 @@ for d in share/lair/*; do
         for e in $d/*; do
             if [ -d $e ]; then
                 for f in $e/*; do
-                    echo $f usr/$e >> debian/install
+		    if [ -d $f ]; then
+		        for g in $f/*; then
+                            echo $g usr/$f >> debian/install
+                        done
+		    else
+                        echo $f usr/$e >> debian/install
+		    fi
                 done
             else
                 echo $e usr/$d >> debian/install
