@@ -1,5 +1,20 @@
 #! /bin/sh
 RETDIR=$(pwd)
+topdir(){
+	TEMP=$(echo "$1" | tr "/" "\n")
+	R=""
+	P=""
+	for p in "$TEMP"; do
+            P="$p"
+	    echo $P
+	    if [ -d "$P" ]; then
+	        R=""
+	        R="$p"
+	    fi
+	done
+	#echo "$R"
+}
+
 if [ -d "$1" ]; then
 	DIR="$1"
 	cd "$DIR"
@@ -11,18 +26,18 @@ if [ -d "$1" ]; then
 		        for f in $e/*; do
 			    if [ -d $f ]; then
 				for g in $f/*; do
-		                    echo $g 
+		                    topdir $g 
 		                done
 			    else
-		                echo $f 
+		                topdir $f 
 			    fi
 		        done
 		    else
-		        echo $e 
+		        topdir $e 
 		    fi
 		done
 	    else
-		echo $d 
+		topdir $d 
 	    fi
 	done
 fi
