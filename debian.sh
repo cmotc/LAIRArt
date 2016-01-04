@@ -23,7 +23,7 @@ cd $DEBFOLDERNAME
 dh_make -s --indep --createorig 
 
 mkdir -p debian/tmp
-cp -R bin share debian/tmp
+cp -R share debian/tmp
 
 # Remove make calls
 grep -v makefile debian/rules > debian/rules.new 
@@ -35,10 +35,16 @@ echo $SOURCEDOC usr/share/doc/$DEBFOLDER >> debian/install
 for d in share/lair/*; do
     if [ -d $d ]; then
         for e in $d/*; do
-            echo $e >> debian/install
+            if [ -d $e ]; then
+                for f in $e/*; do
+                    echo $f usr/$e >> debian/install
+                done
+            else
+                echo $e usr/$d >> debian/install
+            fi
         done
     else
-        echo $d >> debian/install
+        echo $d usr/ >> debian/install
     fi
 done
 
