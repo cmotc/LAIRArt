@@ -6,13 +6,13 @@ topdir(){
 	P=""
 	for p in "$TEMP"; do
             P="$p"
-	    echo $P
+	    #echo $P
 	    if [ -d "$P" ]; then
 	        R=""
 	        R="$p"
 	    fi
 	done
-	#echo "$R"
+	echo "$R"
 }
 
 if [ -d "$1" ]; then
