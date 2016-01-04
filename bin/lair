@@ -1,3 +1,9 @@
 #! /bin/sh
-lair-index-resources
+DEFAULT="/usr/share/lair"
+. /etc/lairrc
+. $HOME/.lairrc
+lair-index-resources "$DEFAULT"
+for d in "$LAIR_RESOURCE_FOLDERS"; do
+    lair-index-resources "$d"
+done
 LAIR "$@"
