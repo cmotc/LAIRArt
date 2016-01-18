@@ -1,11 +1,11 @@
 #! /bin/sh
 RETDIR=$(pwd)
 justname(){
-	RV=$(basename "$1")
+	RV=$(/usr/bin/basename "$1")
 	echo -n "$RV"
 }
 fulldir(){
-	TEMP=$(echo "$1" | tr "/" "\n")
+	TEMP=$(echo "$1" | /usr/bin/tr "/" "\n")
 	TEMP2=""
 	for p in $TEMP; do
 	    RV="$TEMP2"
@@ -17,7 +17,7 @@ fulldir(){
 	echo -n $RV
 }
 topdir(){
-	TEMP=$(echo "$1" | tr "/" "\n")
+	TEMP=$(echo "$1" | /usr/bin/tr "/" "\n")
 	TEMP2=""
 	for p in $TEMP; do
 	    TEMP2="$TEMP2/$p"
@@ -29,16 +29,24 @@ topdir(){
 	done
 	echo -n $RV
 }
+ext(){
+    if [ ! -d $1 ]; then
+        RV=$(echo $1 | /usr/bin/awk -F . '{if (NF>1) {print $NF}}')
+    else
+        RV=$(topdir $1)
+    fi
+    echo $RV
+}
 top(){
     CAT=$(topdir "$1")
-    echo -n "<$CAT>"
-    fulldir "$1/$CAT"
-    echo ""
+    PATH=$(fulldir "$1/$CAT")
+    echo "<$CAT path=\"$PATH\">"
 }
 middle(){
-    echo -n "<item>"
+    CAT=$(ext "$1")
+    echo -n "<$CAT>"
     justname $1
-    echo "</item>"
+    echo "</$CAT>"
 }
 bottom(){
     CAT=$(topdir "$1")
