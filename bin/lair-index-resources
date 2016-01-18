@@ -30,27 +30,19 @@ topdir(){
 	echo -n $RV
 }
 top(){
-        PAT=$(topdir "$1")
-        if grep -q "$PAT" "$1" ; then
-	    CAT=$(topdir "$1")
-            echo -n "<$CAT>"
-            fulldir $1
-            echo -n "<\\" && echo "$CAT>"
-        fi
+    CAT=$(topdir "$1")
+    echo -n "<$CAT>"
+    fulldir "$1/$CAT"
+    echo ""
 }
 middle(){
-    echo -n "    <item>"
+    echo -n "<item>"
     justname $1
-    echo "<\\item>"
+    echo "</item>"
 }
 bottom(){
-    PAT=$(topdir "$1")
-    if grep -q "$PAT" "$1"; then
-        CAT=$(topdir "$1")
-        echo -n "<$CAT>"
-        fulldir $1
-        echo -n "<\\" && echo "$CAT>"
-    fi
+    CAT=$(topdir "$1")
+    echo -n "</" && echo "$CAT>"
 }
 if [ -d "$1" ]; then
 	DIR="$1"
@@ -60,26 +52,34 @@ if [ -d "$1" ]; then
 	X=""
 	Y=""
 	X=""
+	top $WORKDIR
 	for d in $WORKDIR/*; do
 	    if [ -d $d ]; then
+                echo -n "   " && top $d
 		for e in $d/*; do
 		    if [ -d $e ]; then
+		        echo -n "      " && top $e
 		        for f in $e/*; do
 			    if [ -d $f ]; then
+			        echo -n "         " && top $f
 				for g in $f/*; do
-				    top $g && middle $g && bottom $g
+				    echo -n "            " && middle $g
 		                done
+				echo -n "         " && bottom $f
 			    else
-			        top $f && middle $f && bottom $f
+			        echo -n "         " && middle $f
 			    fi
 		        done
+			echo -n "      " && bottom $f
 		    else
-		        top $e && middle $e && bottom $e
+		        echo -n "      " && middle $e
 		    fi
 		done
+		echo -n "   " && bottom $e
 	    else
-		top $d && middle $d && bottom $d
+		echo -n "   " && middle $d
 	    fi
 	done
+	echo -n "" && bottom $WORKDIR
 fi
 cd "$RETDIR"
