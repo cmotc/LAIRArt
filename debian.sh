@@ -4,7 +4,7 @@ SOURCEBINPATH=.
 SOURCEBIN=lair
 SOURCEBINDEX=lair-index-resources
 SOURCEDOC=README.md
-SRCFOLDER=LAIRArt
+SRCFOLDER=valair-data
 DEBFOLDER=valair-data
 DEBVERSION=$(date +%Y%m%d)
 

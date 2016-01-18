@@ -1,24 +1,65 @@
 #! /bin/sh
 RETDIR=$(pwd)
-topdir(){
+justname(){
+	RV=$(basename "$1")
+	echo -n "$RV"
+}
+fulldir(){
 	TEMP=$(echo "$1" | tr "/" "\n")
-	R=""
-	P=""
-	for p in "$TEMP"; do
-            P="$p"
-	    echo $P
-	    if [ -d "$P" ]; then
-	        R=""
-	        R="$p"
+	TEMP2=""
+	for p in $TEMP; do
+	    RV="$TEMP2"
+	    TEMP2="$TEMP2/$p"
+	    if [ ! -d "$TEMP2" ]; then
+	        break
 	    fi
 	done
-	echo "$R"
+	echo -n $RV
 }
-
+topdir(){
+	TEMP=$(echo "$1" | tr "/" "\n")
+	TEMP2=""
+	for p in $TEMP; do
+	    TEMP2="$TEMP2/$p"
+	    if [ ! -d "$TEMP2" ]; then
+	        break
+            else
+	        RV="$p"
+	    fi
+	done
+	echo -n $RV
+}
+top(){
+        PAT=$(topdir "$1")
+        if grep -q "$PAT" "$1" ; then
+	    CAT=$(topdir "$1")
+            echo -n "<$CAT>"
+            fulldir $1
+            echo -n "<\\" && echo "$CAT>"
+        fi
+}
+middle(){
+    echo -n "    <item>"
+    justname $1
+    echo "<\\item>"
+}
+bottom(){
+    PAT=$(topdir "$1")
+    if grep -q "$PAT" "$1"; then
+        CAT=$(topdir "$1")
+        echo -n "<$CAT>"
+        fulldir $1
+        echo -n "<\\" && echo "$CAT>"
+    fi
+}
 if [ -d "$1" ]; then
 	DIR="$1"
 	cd "$DIR"
 	WORKDIR=$(pwd)
+	W=""
+	X=""
+	Y=""
+	X=""
 	for d in $WORKDIR/*; do
 	    if [ -d $d ]; then
 		for e in $d/*; do
@@ -26,18 +67,18 @@ if [ -d "$1" ]; then
 		        for f in $e/*; do
 			    if [ -d $f ]; then
 				for g in $f/*; do
-		                    topdir $g 
+				    top $g && middle $g && bottom $g
 		                done
 			    else
-		                topdir $f 
+			        top $f && middle $f && bottom $f
 			    fi
 		        done
 		    else
-		        topdir $e 
+		        top $e && middle $e && bottom $e
 		    fi
 		done
 	    else
-		topdir $d 
+		top $d && middle $d && bottom $d
 	    fi
 	done
 fi
