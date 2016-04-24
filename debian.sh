@@ -8,7 +8,7 @@ SRCFOLDER=valair-data
 DEBFOLDER=valair-data
 DEBVERSION=$(date +%Y%m%d)
 
-cd $SRCFOLDER
+cd "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 git pull origin master
 
