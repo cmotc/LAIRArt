@@ -27,8 +27,9 @@ func readLines(path string) ([]string, error) {
 func containsAny(item string, colorsTest[] string) (bool){
         var r = false;
         var colorsPost []string = s.Split(colorsTest[0], ";")
-        if s.Contains(item, colorsPost[1]) {
-                fmt.Printf("  Found existing color : %f\n", item)
+        var the_color = s.Replace(colorsPost[1], " ", "", -1)
+        if s.Contains(item, the_color) {
+                fmt.Printf("   Found existing color/alias : %f\n", the_color)
                 r = true
         }
         return r
@@ -43,74 +44,60 @@ func generate (config string)(error){
                 if s.Contains(element, "point") {
                         var cleanElement = s.Replace(element, "point", "", -1)
                         var splitElement = s.Split( cleanElement, ";" )
+                        fmt.Printf(" Cleaned Element : %f\n", cleanElement)
                         var X int = -1
                         var Y int = -1
                         var R uint8 = 0
                         var G uint8 = 0
                         var B uint8 = 0
                         var T uint8 = 0
-                        fmt.Printf("  Preliminary Point Summary : %f\n", element)
+                        fmt.Printf(" Preliminary Point Summary : %f\n", element)
                         for _, cleaned := range splitElement {
                                 if s.Contains(cleaned, "X") {
-                                        var pX,err = strconv.ParseInt(s.Replace(cleaned, "X ", "", -1), 10, 8)
-                                        if err != nil {  r = err }
+                                        var pX,_ = strconv.ParseInt(s.Replace(cleaned, "X ", "", -1), 10, 8)
                                         X = int(pX)
                                         fmt.Printf("  Point Summary X: %f\n", X)
                                 }else if s.Contains(cleaned, "Y") {
-                                        var pY,err = strconv.ParseInt(s.Replace(cleaned, "Y ", "", -1), 10, 8)
-                                        if err != nil {  r = err }
+                                        var pY,_ = strconv.ParseInt(s.Replace(cleaned, "Y ", "", -1), 10, 8)
                                         Y = int(pY)
                                         fmt.Printf("  Point Summary Y: %f\n", Y)
                                 }else if s.Contains(cleaned, "R") {
-                                        var pR,err = strconv.ParseInt(s.Replace(cleaned, "R ", "", -1), 10, 8)
-                                        if err != nil {  r = err }
+                                        var pR,_ = strconv.ParseInt(s.Replace(cleaned, "R ", "", -1), 10, 8)
                                         R = uint8(pR)
                                         fmt.Printf("  Point Red : %f\n", R)
                                 }else if s.Contains(cleaned, "G") {
-                                        var pG,err = strconv.ParseInt(s.Replace(cleaned, "G ", "", -1), 10, 8)
-                                        if err != nil {  r = err }
+                                        var pG,_ = strconv.ParseInt(s.Replace(cleaned, "G ", "", -1), 10, 8)
                                         G = uint8(pG)
                                         fmt.Printf("  Point Green : %f\n", G)
                                 }else if s.Contains(cleaned, "B") {
-                                        var pB,err = strconv.ParseInt(s.Replace(cleaned, "B ", "", -1), 10, 8)
-                                        if err != nil {  r = err }
+                                        var pB,_ = strconv.ParseInt(s.Replace(cleaned, "B ", "", -1), 10, 8)
                                         B = uint8(pB)
                                         fmt.Printf("  Point Blue : %f\n", B)
                                 }else if s.Contains(cleaned, "T") {
-                                        var pT,err = strconv.ParseInt(s.Replace(cleaned, "T ", "", -1), 10, 8)
-                                        if err != nil {  r = err }
+                                        var pT,_ = strconv.ParseInt(s.Replace(cleaned, "T ", "", -1), 10, 8)
                                         T = uint8(pT)
                                         fmt.Printf("  Point Alpha : %f\n", T)
                                 }else if containsAny(element, COLORS) {
-                                        var the_color = s.Split(element, ";")
-                                        //fmt.Printf("  Color Alias : %f\n", the_color)
-                                        for _, colorcleaned := range the_color {
-                                                fmt.Printf("  Color Alias : %f\n", colorcleaned[0])
-                                                if s.Contains(colorcleaned, "R") {
-                                                        var pR,err = strconv.ParseInt(s.Replace(cleaned, "R ", "", -1), 10, 8)
-                                                        if err != nil {  r = err }
+                                        for _, colorcleaned := range COLORS {
+                                                var the_color = (s.Split(colorcleaned, ";"))
+                                                if s.Contains(colorcleaned, splitElement[3]){
+                                                        var pR,_ = strconv.ParseInt(s.Replace(the_color[2], "R ", "", -1), 10, 8)
                                                         R = uint8(pR)
-                                                        fmt.Printf("  Point Summary : %f\n", R)
-                                                }else if s.Contains(colorcleaned, "G") {
-                                                        var pG,err = strconv.ParseInt(s.Replace(cleaned, "G ", "", -1), 10, 8)
-                                                        if err != nil {  r = err }
+                                                        fmt.Printf("   Point Red(a) : %f\n", R)
+                                                        var pG,_ = strconv.ParseInt(s.Replace(the_color[3], "G ", "", -1), 10, 8)
                                                         G = uint8(pG)
-                                                        fmt.Printf("  Point Summary : %f\n", G)
-                                                }else if s.Contains(colorcleaned, "B") {
-                                                        var pB,err = strconv.ParseInt(s.Replace(cleaned, "B ", "", -1), 10, 8)
-                                                        if err != nil {  r = err }
+                                                        fmt.Printf("   Point Green(a) : %f\n", G)
+                                                        var pB,_ = strconv.ParseInt(s.Replace(the_color[4], "B ", "", -1), 10, 8)
                                                         B = uint8(pB)
-                                                        fmt.Printf("  Point Summary : %f\n", B)
-                                                }else if s.Contains(colorcleaned, "T") {
-                                                        var pT,err = strconv.ParseInt(s.Replace(cleaned, "T ", "", -1), 10, 8)
-                                                        if err != nil {  r = err }
+                                                        fmt.Printf("   Point Blue(a) : %f\n", B)
+                                                        var pT,_ = strconv.ParseInt(s.Replace(the_color[5], "T ", "", -1), 10, 8)
                                                         T = uint8(pT)
-                                                        fmt.Printf("  Point Summary : %f\n", T)
+                                                        fmt.Printf("   Point Alpha(a) : %f\n", T)
                                                 }
                                         }
                                 }
                         }
-                        fmt.Printf(" Creating point : %f\n", cleanElement)
+                        fmt.Printf("  Creating point : %f\n", cleanElement)
                         img.Set(X, Y, color.RGBA{R, G, B, T})
                 }else if s.Contains(element, "color") {
                         element = s.Replace(element, "color", "", -1)
@@ -118,7 +105,7 @@ func generate (config string)(error){
                         COLORS = append(COLORS, element)
                 }
         }
-        // Save to config.png
+        // Save to file.png
         var name = s.Replace(s.Replace(s.Replace(config, "/", "", -1), ".txt", "", -1), "skel", "", -1) + ".png"
         fmt.Printf("Saving PNG file : %f\n", name)
         f, _ := os.OpenFile(name, os.O_WRONLY|os.O_CREATE, 0600)
@@ -140,8 +127,6 @@ func main() {
                         var path=s.Replace(element, "path=", "", -1)
                         fmt.Printf(" Using skeleton file : %f\n", path)
                         generate(path)
-                } else {
-                        generate("config.txt")
                 }
         }
 }

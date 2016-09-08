@@ -1,1 +1,4 @@
+path=skel/torso.txt
+path=skel/head.txt
 path=skel/arms.txt
+

@@ -1,5 +1,227 @@
-color; red;R 255;G 0;B 0;T 255
 color; green;R 0;G 255;B 0;T 255
 color; blue;R 0;G 0;B 255;T 255
+color; red;R 255;G 0;B 0;T 255
 
-point;X 16;Y 16;R 255;G 0;B 0;T 255
+point;X 5;Y 7; green
+point;X 6;Y 7; green
+point;X 7;Y 7; green
+point;X 8;Y 7; green
+
+point;X 5;Y 8; green
+point;X 6;Y 8; green
+point;X 7;Y 8; green
+point;X 8;Y 8; green
+
+point;X 5;Y 9; green
+point;X 6;Y 9; green
+point;X 7;Y 9; green
+point;X 8;Y 9; green
+
+point;X 5;Y 10; green
+point;X 6;Y 10; green
+point;X 7;Y 10; green
+point;X 8;Y 10; green
+
+point;X 5;Y 11; green
+point;X 6;Y 11; green
+point;X 7;Y 11; green
+point;X 8;Y 11; green
+
+point;X 5;Y 12; green
+point;X 6;Y 12; green
+point;X 7;Y 12; green
+point;X 8;Y 12; green
+
+point;X 5;Y 13; green
+point;X 6;Y 13; green
+point;X 7;Y 13; green
+point;X 8;Y 13; green
+
+point;X 5;Y 14; green
+point;X 6;Y 14; green
+point;X 7;Y 14; green
+point;X 8;Y 14; green
+
+point;X 5;Y 15; green
+point;X 6;Y 15; green
+point;X 7;Y 15; green
+point;X 8;Y 15; green
+
+point;X 5;Y 16; green
+point;X 6;Y 16; green
+point;X 7;Y 16; green
+point;X 8;Y 16; green
+
+point;X 5;Y 17; green
+point;X 6;Y 17; green
+point;X 7;Y 17; green
+point;X 8;Y 17; green
+
+point;X 5;Y 18; green
+point;X 6;Y 18; green
+point;X 7;Y 18; green
+point;X 8;Y 18; green
+
+point;X 5;Y 19; green
+point;X 6;Y 19; green
+point;X 7;Y 19; green
+point;X 8;Y 19; green
+
+point;X 5;Y 20; green
+point;X 6;Y 20; green
+point;X 7;Y 20; green
+point;X 8;Y 20; green
+
+point;X 5;Y 21; green
+point;X 6;Y 21; green
+point;X 7;Y 21; green
+point;X 8;Y 21; green
+
+point;X 5;Y 22; green
+point;X 6;Y 22; green
+point;X 7;Y 22; green
+point;X 8;Y 22; green
+
+point;X 5;Y 23; green
+point;X 6;Y 23; green
+point;X 7;Y 23; green
+point;X 8;Y 23; green
+
+point;X 5;Y 24; green
+point;X 6;Y 24; green
+point;X 7;Y 24; green
+point;X 8;Y 24; green
+
+point;X 5;Y 25; green
+point;X 6;Y 25; green
+point;X 7;Y 25; green
+point;X 8;Y 25; green
+
+point;X 5;Y 26; green
+point;X 6;Y 26; green
+point;X 7;Y 26; green
+point;X 8;Y 26; green
+
+point;X 5;Y 27; green
+point;X 6;Y 27; green
+point;X 7;Y 27; green
+point;X 8;Y 27; green
+
+point;X 5;Y 28; green
+point;X 6;Y 28; green
+point;X 7;Y 28; green
+point;X 8;Y 28; green
+
+
+
+point;X 23;Y 7; green
+point;X 24;Y 7; green
+point;X 25;Y 7; green
+point;X 26;Y 7; green
+
+point;X 23;Y 8; green
+point;X 24;Y 8; green
+point;X 25;Y 8; green
+point;X 26;Y 8; green
+
+point;X 23;Y 9; green
+point;X 24;Y 9; green
+point;X 25;Y 9; green
+point;X 26;Y 9; green
+
+point;X 23;Y 10; green
+point;X 24;Y 10; green
+point;X 25;Y 10; green
+point;X 26;Y 10; green
+
+point;X 23;Y 11; green
+point;X 24;Y 11; green
+point;X 25;Y 11; green
+point;X 26;Y 11; green
+
+point;X 23;Y 12; green
+point;X 24;Y 12; green
+point;X 25;Y 12; green
+point;X 26;Y 12; green
+
+point;X 23;Y 13; green
+point;X 24;Y 13; green
+point;X 25;Y 13; green
+point;X 26;Y 13; green
+
+point;X 23;Y 14; green
+point;X 24;Y 14; green
+point;X 25;Y 14; green
+point;X 26;Y 14; green
+
+point;X 23;Y 15; green
+point;X 24;Y 15; green
+point;X 25;Y 15; green
+point;X 26;Y 15; green
+
+point;X 23;Y 16; green
+point;X 24;Y 16; green
+point;X 25;Y 16; green
+point;X 26;Y 16; green
+
+point;X 23;Y 17; green
+point;X 24;Y 17; green
+point;X 25;Y 17; green
+point;X 26;Y 17; green
+
+point;X 23;Y 18; green
+point;X 24;Y 18; green
+point;X 25;Y 18; green
+point;X 26;Y 18; green
+
+point;X 23;Y 19; green
+point;X 24;Y 19; green
+point;X 25;Y 19; green
+point;X 26;Y 19; green
+
+point;X 23;Y 20; green
+point;X 24;Y 20; green
+point;X 25;Y 20; green
+point;X 26;Y 20; green
+
+point;X 23;Y 21; green
+point;X 24;Y 21; green
+point;X 25;Y 21; green
+point;X 26;Y 21; green
+
+point;X 23;Y 22; green
+point;X 24;Y 22; green
+point;X 25;Y 22; green
+point;X 26;Y 22; green
+
+point;X 23;Y 23; green
+point;X 24;Y 23; green
+point;X 25;Y 23; green
+point;X 26;Y 23; green
+
+point;X 23;Y 24; green
+point;X 24;Y 24; green
+point;X 25;Y 24; green
+point;X 26;Y 24; green
+
+point;X 23;Y 25; green
+point;X 24;Y 25; green
+point;X 25;Y 25; green
+point;X 26;Y 25; green
+
+point;X 23;Y 26; green
+point;X 24;Y 26; green
+point;X 25;Y 26; green
+point;X 26;Y 26; green
+
+point;X 23;Y 27; green
+point;X 24;Y 27; green
+point;X 25;Y 27; green
+point;X 26;Y 27; green
+
+point;X 23;Y 28; green
+point;X 24;Y 28; green
+point;X 25;Y 28; green
+point;X 26;Y 28; green
+
+
