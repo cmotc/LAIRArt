@@ -26,11 +26,21 @@ func readLines(path string) ([]string, error) {
 
 func containsAny(item string, colorsTest[] string) (bool){
         var r = false;
-        var colorsPost []string = s.Split(colorsTest[0], ";")
+        var itemSplit[] string = s.Split(item, ";")
+        var colorsPost []string
+        for index,element := range colorsTest {
+                if s.Contains(element, itemSplit[3]) {
+                        colorsPost = s.Split(colorsTest[index], ";")
+                }
+        }
         var the_color = s.Replace(colorsPost[1], " ", "", -1)
         if s.Contains(item, the_color) {
                 fmt.Printf("   Found existing color/alias : %f\n", the_color)
                 r = true
+        }else{
+                fmt.Printf("   No known color/alias : %f\n", the_color)
+                fmt.Printf("   No known color/alias : %f\n", colorsTest)
+                fmt.Printf("   No known color/alias : %f\n", item)
         }
         return r
 }
@@ -79,7 +89,8 @@ func generate (config string)(error){
                                         fmt.Printf("  Point Alpha : %f\n", T)
                                 }else if containsAny(element, COLORS) {
                                         for _, colorcleaned := range COLORS {
-                                                var the_color = (s.Split(colorcleaned, ";"))
+                                                var the_color = s.Split(colorcleaned, ";")
+                                                //fmt.Printf("   Point Green(a) : %f\n", the_color)
                                                 if s.Contains(colorcleaned, splitElement[3]){
                                                         var pR,_ = strconv.ParseInt(s.Replace(the_color[2], "R ", "", -1), 10, 8)
                                                         R = uint8(pR)
