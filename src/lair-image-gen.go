@@ -9,7 +9,7 @@ import "os"
 import "math/rand"
 import "strconv"
 import s "strings"
-
+import "time"
 
 func readLines(path string) ([]string, error) {
         file, err := os.Open(path)
@@ -26,7 +26,7 @@ func readLines(path string) ([]string, error) {
 }
 
 func howMany(item string, colorsTest[] string)(int){
-        var r = 1
+        var r int = 1
         var itemSplit[] string = s.Split(item, ";")
         for index,element := range colorsTest {
                 if s.Contains(element, itemSplit[3]) {
@@ -59,7 +59,7 @@ func containsAny(item string, colorsTest[] string) (bool){
 func generate (config string)(error){
         img := image.NewRGBA(image.Rect(0, 0, 32, 32))
         var file,err = readLines(config)
-        var r error
+        var rv error
         var COLORS []string
         for _,element := range file {
                 if s.Contains(element, "point") {
@@ -99,9 +99,10 @@ func generate (config string)(error){
                                         T = uint8(pT)
                                         fmt.Printf("  Point Alpha : %f\n", T)
                                 }else if containsAny(element, COLORS) {
-                                        var count = howMany(element, COLORS)
-                                        r := rand.New(time.Now().UnixNano())
-                                        var times = r.perm(count) + 1
+                                        var count int = howMany(element, COLORS)
+                                        r := rand.New(rand.NewSource(time.Now().UTC().UnixNano()))
+                                        var times = r.Intn(count)
+                                        times++
                                         for _, colorcleaned := range COLORS {
                                                 var the_color = s.Split(colorcleaned, ";")
                                                 if s.Contains(colorcleaned, splitElement[3]){
@@ -139,8 +140,8 @@ func generate (config string)(error){
         f, _ := os.OpenFile(name, os.O_WRONLY|os.O_CREATE, 0600)
         defer f.Close()
         png.Encode(f, img)
-        if err != nil {  r = err }
-        return r
+        if err != nil {  rv = err }
+        return rv
 }
 
 func main() {
