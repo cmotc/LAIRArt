@@ -6,6 +6,7 @@ import "image"
 import "image/color"
 import "image/png"
 import "os"
+import "math/rand"
 import "strconv"
 import s "strings"
 
@@ -24,6 +25,16 @@ func readLines(path string) ([]string, error) {
         return lines, scanner.Err()
 }
 
+func howMany(item string, colorsTest[] string)(int){
+        var r = 1
+        var itemSplit[] string = s.Split(item, ";")
+        for index,element := range colorsTest {
+                if s.Contains(element, itemSplit[3]) {
+                        r = index
+                }
+        }
+        return r
+}
 func containsAny(item string, colorsTest[] string) (bool){
         var r = false;
         var itemSplit[] string = s.Split(item, ";")
@@ -88,9 +99,11 @@ func generate (config string)(error){
                                         T = uint8(pT)
                                         fmt.Printf("  Point Alpha : %f\n", T)
                                 }else if containsAny(element, COLORS) {
+                                        var count = howMany(element, COLORS)
+                                        r := rand.New(time.Now().UnixNano())
+                                        var times = r.perm(count) + 1
                                         for _, colorcleaned := range COLORS {
                                                 var the_color = s.Split(colorcleaned, ";")
-                                                //fmt.Printf("   Point Green(a) : %f\n", the_color)
                                                 if s.Contains(colorcleaned, splitElement[3]){
                                                         var pR,_ = strconv.ParseInt(s.Replace(the_color[2], "R ", "", -1), 10, 8)
                                                         R = uint8(pR)
@@ -104,6 +117,10 @@ func generate (config string)(error){
                                                         var pT,_ = strconv.ParseInt(s.Replace(the_color[5], "T ", "", -1), 10, 8)
                                                         T = uint8(pT)
                                                         fmt.Printf("   Point Alpha(a) : %f\n", T)
+                                                        count--
+                                                        if count == 0 {
+                                                                break
+                                                        }
                                                 }
                                         }
                                 }
@@ -128,10 +145,7 @@ func generate (config string)(error){
 
 func main() {
         var cfg = "config.txt"
-        var file,err = readLines(cfg)
-        if err != nil {
-
-        }
+        var file,_ = readLines(cfg)
         fmt.Printf("Using config file : %f\n", cfg)
         for _,element := range file {
                 if s.Contains(element, "path=") {
