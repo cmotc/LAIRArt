@@ -125,7 +125,7 @@ func generate (config string)(error){
                                                         T = uint8(pT)
                                                         fmt.Printf("   Point Alpha(a) : %f\n", T)
                                                         times--
-                                                        fmt.Printf("-  Elapsed : %f\n", times)
+                                                        fmt.Printf("-   Elapsed : %f\n", times)
                                                         if times == 0 {
                                                                 break
                                                         }                                                //}
