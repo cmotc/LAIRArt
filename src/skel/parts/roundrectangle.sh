@@ -12,6 +12,7 @@ roundrectangle(){
                         PPOINT_X=`expr $STARTX + $POINT_X`
                         PPOINT_Y=`expr $STARTY + $POINT_Y`
                         echo "point;X $POINT_X;Y $POINT_Y; $POINT_COLORS"
+                        #None of this is going to work. Revise tomorrow.
                 done
         done
 }
