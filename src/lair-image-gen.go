@@ -33,25 +33,30 @@ func howMany(item string, colorsTest[] string)(int){
                         r = index
                 }
         }
+        r++
         return r
 }
 func containsAny(item string, colorsTest[] string) (bool){
         var r = false;
         var itemSplit[] string = s.Split(item, ";")
+        fmt.Printf("   itemSplit %f\n", itemSplit)
         var colorsPost []string
-        for index,element := range colorsTest {
-                if s.Contains(element, itemSplit[3]) {
-                        colorsPost = s.Split(colorsTest[index], ";")
+        var itemSplit2 []string = s.Split(itemSplit[3], " ")
+        fmt.Printf("   itemSplit2 %f\n", itemSplit2)
+        for _,element := range colorsTest {
+                for _, e := range itemSplit2 {
+                        if s.Contains(element, s.Replace(e, " ", "", -1)) {
+                                colorsPost = s.Split(element, ";")
+                        }
                 }
         }
-        var the_color = s.Replace(colorsPost[1], " ", "", -1)
-        if s.Contains(item, the_color) {
-                fmt.Printf("   Found existing color/alias : %f\n", the_color)
-                r = true
-        }else{
-                fmt.Printf("   No known color/alias : %f\n", the_color)
-                fmt.Printf("   No known color/alias : %f\n", colorsTest)
-                fmt.Printf("   No known color/alias : %f\n", item)
+        for _,the_color := range colorsPost{
+                if s.Contains(item, s.Replace(the_color, " ", "", -1)) {
+                        fmt.Printf("   Found existing color/alias : %f\n", colorsPost)
+                        r = true
+                }else{
+                        fmt.Printf("   No known color/alias : %f\n", the_color)
+                }
         }
         return r
 }
@@ -100,12 +105,13 @@ func generate (config string)(error){
                                         fmt.Printf("  Point Alpha : %f\n", T)
                                 }else if containsAny(element, COLORS) {
                                         var count int = howMany(element, COLORS)
+                                        fmt.Printf("-   Count: %f\n", count)
                                         r := rand.New(rand.NewSource(time.Now().UTC().UnixNano()))
                                         var times = r.Intn(count)
                                         times++
+                                        fmt.Printf("-   Times: %f\n", count)
                                         for _, colorcleaned := range COLORS {
-                                                var the_color = s.Split(colorcleaned, ";")
-                                                if s.Contains(colorcleaned, splitElement[3]){
+                                                var the_color = s.Split(colorcleaned, ";")                                                //if s.Contains(colorcleaned, splitElement[3]){
                                                         var pR,_ = strconv.ParseInt(s.Replace(the_color[2], "R ", "", -1), 10, 8)
                                                         R = uint8(pR)
                                                         fmt.Printf("   Point Red(a) : %f\n", R)
@@ -118,11 +124,11 @@ func generate (config string)(error){
                                                         var pT,_ = strconv.ParseInt(s.Replace(the_color[5], "T ", "", -1), 10, 8)
                                                         T = uint8(pT)
                                                         fmt.Printf("   Point Alpha(a) : %f\n", T)
-                                                        count--
-                                                        if count == 0 {
+                                                        times--
+                                                        fmt.Printf("-  Elapsed : %f\n", times)
+                                                        if times == 0 {
                                                                 break
-                                                        }
-                                                }
+                                                        }                                                //}
                                         }
                                 }
                         }
