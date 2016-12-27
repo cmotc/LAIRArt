@@ -2,99 +2,103 @@
 /usr/share/lair/colors/colors-2.png colors default
 /usr/share/lair/colors/colors-3.png colors default
 /usr/share/lair/colors/colors-4.png colors default
-/usr/share/lair/colortest/colortest-1.png colortest default
-/usr/share/lair/colortest/colortest-2.png colortest default
-/usr/share/lair/colortest/colortest-3.png colortest default
-/usr/share/lair/colortest/colortest-4.png colortest default
-/usr/share/lair/darkbody/darkbody-1.png darkbody default
-/usr/share/lair/darkbody/darkbody-2.png darkbody default
-/usr/share/lair/darkbody/darkbody-3.png darkbody default
-/usr/share/lair/darkbody/darkbody-4.png darkbody default
-/usr/share/lair/darkhead/darkhead-1.png darkhead default
-/usr/share/lair/darkhead/darkhead-2.png darkhead default
-/usr/share/lair/darkhead/darkhead-3.png darkhead default
-/usr/share/lair/darkhead/darkhead-4.png darkhead default
-/usr/share/lair/darkleftarms/darkleftarms-1.png darkleftarms default
-/usr/share/lair/darkleftarms/darkleftarms-2.png darkleftarms default
-/usr/share/lair/darkleftarms/darkleftarms-3.png darkleftarms default
-/usr/share/lair/darkleftarms/darkleftarms-4.png darkleftarms default
-/usr/share/lair/darkleftleg/darkleftleg-1.png darkleftleg default
-/usr/share/lair/darkleftleg/darkleftleg-2.png darkleftleg default
-/usr/share/lair/darkleftleg/darkleftleg-3.png darkleftleg default
-/usr/share/lair/darkleftleg/darkleftleg-4.png darkleftleg default
-/usr/share/lair/darkrightarms/darkrightarms-1.png darkrightarms default
-/usr/share/lair/darkrightarms/darkrightarms-2.png darkrightarms default
-/usr/share/lair/darkrightarms/darkrightarms-3.png darkrightarms default
-/usr/share/lair/darkrightarms/darkrightarms-4.png darkrightarms default
-/usr/share/lair/darkrightleg/darkrightleg-1.png darkrightleg default
-/usr/share/lair/darkrightleg/darkrightleg-2.png darkrightleg default
-/usr/share/lair/darkrightleg/darkrightleg-3.png darkrightleg default
-/usr/share/lair/darkrightleg/darkrightleg-4.png darkrightleg default
-/usr/share/lair/greenshirt/greenshirt-1.png greenshirt default
-/usr/share/lair/greenshirt/greenshirt-2.png greenshirt default
-/usr/share/lair/greenshirt/greenshirt-3.png greenshirt default
-/usr/share/lair/greenshirt/greenshirt-4.png greenshirt default
-/usr/share/lair/lightbody/lightbody-1.png lightbody default
-/usr/share/lair/lightbody/lightbody-2.png lightbody default
-/usr/share/lair/lightbody/lightbody-3.png lightbody default
-/usr/share/lair/lightbody/lightbody-4.png lightbody default
-/usr/share/lair/lighthead/lighthead-1.png lighthead default
-/usr/share/lair/lighthead/lighthead-2.png lighthead default
-/usr/share/lair/lighthead/lighthead-3.png lighthead default
-/usr/share/lair/lighthead/lighthead-4.png lighthead default
-/usr/share/lair/lightleftarms/lightleftarms-1.png lightleftarms default
-/usr/share/lair/lightleftarms/lightleftarms-2.png lightleftarms default
-/usr/share/lair/lightleftarms/lightleftarms-3.png lightleftarms default
-/usr/share/lair/lightleftarms/lightleftarms-4.png lightleftarms default
-/usr/share/lair/lightleftleg/lightleftleg-1.png lightleftleg default
-/usr/share/lair/lightleftleg/lightleftleg-2.png lightleftleg default
-/usr/share/lair/lightleftleg/lightleftleg-3.png lightleftleg default
-/usr/share/lair/lightleftleg/lightleftleg-4.png lightleftleg default
-/usr/share/lair/lightrightarms/lightrightarms-1.png lightrightarms default
-/usr/share/lair/lightrightarms/lightrightarms-2.png lightrightarms default
-/usr/share/lair/lightrightarms/lightrightarms-3.png lightrightarms default
-/usr/share/lair/lightrightarms/lightrightarms-4.png lightrightarms default
-/usr/share/lair/lightrightleg/lightrightleg-1.png lightrightleg default
-/usr/share/lair/lightrightleg/lightrightleg-2.png lightrightleg default
-/usr/share/lair/lightrightleg/lightrightleg-3.png lightrightleg default
-/usr/share/lair/lightrightleg/lightrightleg-4.png lightrightleg default
-/usr/share/lair/medbody/medbody-1.png medbody default
-/usr/share/lair/medbody/medbody-2.png medbody default
-/usr/share/lair/medbody/medbody-3.png medbody default
-/usr/share/lair/medbody/medbody-4.png medbody default
-/usr/share/lair/medhead/medhead-1.png medhead default
-/usr/share/lair/medhead/medhead-2.png medhead default
-/usr/share/lair/medhead/medhead-3.png medhead default
-/usr/share/lair/medhead/medhead-4.png medhead default
-/usr/share/lair/medleftarms/medleftarms-1.png medleftarms default
-/usr/share/lair/medleftarms/medleftarms-2.png medleftarms default
-/usr/share/lair/medleftarms/medleftarms-3.png medleftarms default
-/usr/share/lair/medleftarms/medleftarms-4.png medleftarms default
-/usr/share/lair/medleftleg/medleftleg-1.png medleftleg default
-/usr/share/lair/medleftleg/medleftleg-2.png medleftleg default
-/usr/share/lair/medleftleg/medleftleg-3.png medleftleg default
-/usr/share/lair/medleftleg/medleftleg-4.png medleftleg default
-/usr/share/lair/medrightarms/medrightarms-1.png medrightarms default
-/usr/share/lair/medrightarms/medrightarms-2.png medrightarms default
-/usr/share/lair/medrightarms/medrightarms-3.png medrightarms default
-/usr/share/lair/medrightarms/medrightarms-4.png medrightarms default
-/usr/share/lair/medrightleg/medrightleg-1.png medrightleg default
-/usr/share/lair/medrightleg/medrightleg-2.png medrightleg default
-/usr/share/lair/medrightleg/medrightleg-3.png medrightleg default
-/usr/share/lair/medrightleg/medrightleg-4.png medrightleg default
-/usr/share/lair/redshirt/redshirt-1.png redshirt default
-/usr/share/lair/redshirt/redshirt-2.png redshirt default
-/usr/share/lair/redshirt/redshirt-3.png redshirt default
-/usr/share/lair/redshirt/redshirt-4.png redshirt default
-/usr/share/lair/rubble2/rubble2-1.png rubble2 default
-/usr/share/lair/rubble2/rubble2-2.png rubble2 default
-/usr/share/lair/rubble2/rubble2-3.png rubble2 default
-/usr/share/lair/rubble2/rubble2-4.png rubble2 default
-/usr/share/lair/rubble/rubble-1.png rubble default
-/usr/share/lair/rubble/rubble-2.png rubble default
-/usr/share/lair/rubble/rubble-3.png rubble default
-/usr/share/lair/rubble/rubble-4.png rubble default
-/usr/share/lair/stonewall/stonewall-1.png stonewall default
-/usr/share/lair/stonewall/stonewall-2.png stonewall default
-/usr/share/lair/stonewall/stonewall-3.png stonewall default
-/usr/share/lair/stonewall/stonewall-4.png stonewall default
+/usr/share/lair/color_test/color_test-1.png color test default
+/usr/share/lair/color_test/color_test-2.png color test default
+/usr/share/lair/color_test/color_test-3.png color test default
+/usr/share/lair/color_test/color_test-4.png color test default
+/usr/share/lair/floor_stone_squares/floor_stone_squares-1.png floor stone squares default
+/usr/share/lair/floor_stone_squares/floor_stone_squares-2.png floor stone squares default
+/usr/share/lair/floor_stone_squares/floor_stone_squares-3.png floor stone squares default
+/usr/share/lair/floor_stone_squares/floor_stone_squares-4.png floor stone squares default
+/usr/share/lair/human_dark_body/human_dark_body-1.png human dark body default
+/usr/share/lair/human_dark_body/human_dark_body-2.png human dark body default
+/usr/share/lair/human_dark_body/human_dark_body-3.png human dark body default
+/usr/share/lair/human_dark_body/human_dark_body-4.png human dark body default
+/usr/share/lair/human_dark_head/human_dark_head-1.png human dark head default
+/usr/share/lair/human_dark_head/human_dark_head-2.png human dark head default
+/usr/share/lair/human_dark_head/human_dark_head-3.png human dark head default
+/usr/share/lair/human_dark_head/human_dark_head-4.png human dark head default
+/usr/share/lair/human_dark_left_arms/human_dark_left_arms-1.png human dark left arms default
+/usr/share/lair/human_dark_left_arms/human_dark_left_arms-2.png human dark left arms default
+/usr/share/lair/human_dark_left_arms/human_dark_left_arms-3.png human dark left arms default
+/usr/share/lair/human_dark_left_arms/human_dark_left_arms-4.png human dark left arms default
+/usr/share/lair/human_dark_left_leg/human_dark_left_leg-1.png human dark left leg default
+/usr/share/lair/human_dark_left_leg/human_dark_left_leg-2.png human dark left leg default
+/usr/share/lair/human_dark_left_leg/human_dark_left_leg-3.png human dark left leg default
+/usr/share/lair/human_dark_left_leg/human_dark_left_leg-4.png human dark left leg default
+/usr/share/lair/human_dark_right_arms/human_dark_right_arms-1.png human dark right arms default
+/usr/share/lair/human_dark_right_arms/human_dark_right_arms-2.png human dark right arms default
+/usr/share/lair/human_dark_right_arms/human_dark_right_arms-3.png human dark right arms default
+/usr/share/lair/human_dark_right_arms/human_dark_right_arms-4.png human dark right arms default
+/usr/share/lair/human_dark_right_leg/human_dark_right_leg-1.png human dark right leg default
+/usr/share/lair/human_dark_right_leg/human_dark_right_leg-2.png human dark right leg default
+/usr/share/lair/human_dark_right_leg/human_dark_right_leg-3.png human dark right leg default
+/usr/share/lair/human_dark_right_leg/human_dark_right_leg-4.png human dark right leg default
+/usr/share/lair/human_light_body/human_light_body-1.png human light body default
+/usr/share/lair/human_light_body/human_light_body-2.png human light body default
+/usr/share/lair/human_light_body/human_light_body-3.png human light body default
+/usr/share/lair/human_light_body/human_light_body-4.png human light body default
+/usr/share/lair/human_light_head/human_light_head-1.png human light head default
+/usr/share/lair/human_light_head/human_light_head-2.png human light head default
+/usr/share/lair/human_light_head/human_light_head-3.png human light head default
+/usr/share/lair/human_light_head/human_light_head-4.png human light head default
+/usr/share/lair/human_light_left_arms/human_light_left_arms-1.png human light left arms default
+/usr/share/lair/human_light_left_arms/human_light_left_arms-2.png human light left arms default
+/usr/share/lair/human_light_left_arms/human_light_left_arms-3.png human light left arms default
+/usr/share/lair/human_light_left_arms/human_light_left_arms-4.png human light left arms default
+/usr/share/lair/human_light_left_leg/human_light_left_leg-1.png human light left leg default
+/usr/share/lair/human_light_left_leg/human_light_left_leg-2.png human light left leg default
+/usr/share/lair/human_light_left_leg/human_light_left_leg-3.png human light left leg default
+/usr/share/lair/human_light_left_leg/human_light_left_leg-4.png human light left leg default
+/usr/share/lair/human_light_right_arms/human_light_right_arms-1.png human light right arms default
+/usr/share/lair/human_light_right_arms/human_light_right_arms-2.png human light right arms default
+/usr/share/lair/human_light_right_arms/human_light_right_arms-3.png human light right arms default
+/usr/share/lair/human_light_right_arms/human_light_right_arms-4.png human light right arms default
+/usr/share/lair/human_light_right_leg/human_light_right_leg-1.png human light right leg default
+/usr/share/lair/human_light_right_leg/human_light_right_leg-2.png human light right leg default
+/usr/share/lair/human_light_right_leg/human_light_right_leg-3.png human light right leg default
+/usr/share/lair/human_light_right_leg/human_light_right_leg-4.png human light right leg default
+/usr/share/lair/human_med_body/human_med_body-1.png human med body default
+/usr/share/lair/human_med_body/human_med_body-2.png human med body default
+/usr/share/lair/human_med_body/human_med_body-3.png human med body default
+/usr/share/lair/human_med_body/human_med_body-4.png human med body default
+/usr/share/lair/human_med_head/human_med_head-1.png human med head default
+/usr/share/lair/human_med_head/human_med_head-2.png human med head default
+/usr/share/lair/human_med_head/human_med_head-3.png human med head default
+/usr/share/lair/human_med_head/human_med_head-4.png human med head default
+/usr/share/lair/human_med_left_arms/human_med_left_arms-1.png human med left arms default
+/usr/share/lair/human_med_left_arms/human_med_left_arms-2.png human med left arms default
+/usr/share/lair/human_med_left_arms/human_med_left_arms-3.png human med left arms default
+/usr/share/lair/human_med_left_arms/human_med_left_arms-4.png human med left arms default
+/usr/share/lair/human_med_left_leg/human_med_left_leg-1.png human med left leg default
+/usr/share/lair/human_med_left_leg/human_med_left_leg-2.png human med left leg default
+/usr/share/lair/human_med_left_leg/human_med_left_leg-3.png human med left leg default
+/usr/share/lair/human_med_left_leg/human_med_left_leg-4.png human med left leg default
+/usr/share/lair/human_med_right_arms/human_med_right_arms-1.png human med right arms default
+/usr/share/lair/human_med_right_arms/human_med_right_arms-2.png human med right arms default
+/usr/share/lair/human_med_right_arms/human_med_right_arms-3.png human med right arms default
+/usr/share/lair/human_med_right_arms/human_med_right_arms-4.png human med right arms default
+/usr/share/lair/human_med_right_leg/human_med_right_leg-1.png human med right leg default
+/usr/share/lair/human_med_right_leg/human_med_right_leg-2.png human med right leg default
+/usr/share/lair/human_med_right_leg/human_med_right_leg-3.png human med right leg default
+/usr/share/lair/human_med_right_leg/human_med_right_leg-4.png human med right leg default
+/usr/share/lair/shirt_regular_green/shirt_regular_green-1.png shirt regular green default
+/usr/share/lair/shirt_regular_green/shirt_regular_green-2.png shirt regular green default
+/usr/share/lair/shirt_regular_green/shirt_regular_green-3.png shirt regular green default
+/usr/share/lair/shirt_regular_green/shirt_regular_green-4.png shirt regular green default
+/usr/share/lair/shirt_regular_red/shirt_regular_red-1.png shirt regular red default
+/usr/share/lair/shirt_regular_red/shirt_regular_red-2.png shirt regular red default
+/usr/share/lair/shirt_regular_red/shirt_regular_red-3.png shirt regular red default
+/usr/share/lair/shirt_regular_red/shirt_regular_red-4.png shirt regular red default
+/usr/share/lair/stone_rubble_corner_left/stone_rubble_corner_left-1.png stone rubble corner left default
+/usr/share/lair/stone_rubble_corner_left/stone_rubble_corner_left-2.png stone rubble corner left default
+/usr/share/lair/stone_rubble_corner_left/stone_rubble_corner_left-3.png stone rubble corner left default
+/usr/share/lair/stone_rubble_corner_left/stone_rubble_corner_left-4.png stone rubble corner left default
+/usr/share/lair/stone_rubble_corner_right/stone_rubble_corner_right-1.png stone rubble corner right default
+/usr/share/lair/stone_rubble_corner_right/stone_rubble_corner_right-2.png stone rubble corner right default
+/usr/share/lair/stone_rubble_corner_right/stone_rubble_corner_right-3.png stone rubble corner right default
+/usr/share/lair/stone_rubble_corner_right/stone_rubble_corner_right-4.png stone rubble corner right default
+/usr/share/lair/wall_stone_bricked/wall_stone_bricked-1.png wall stone bricked default
+/usr/share/lair/wall_stone_bricked/wall_stone_bricked-2.png wall stone bricked default
+/usr/share/lair/wall_stone_bricked/wall_stone_bricked-3.png wall stone bricked default
+/usr/share/lair/wall_stone_bricked/wall_stone_bricked-4.png wall stone bricked default

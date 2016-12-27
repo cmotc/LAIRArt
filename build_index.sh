@@ -4,7 +4,8 @@ rm share/lair/images.list
 rm share/lair/sounds.list
 rm share/lair/fonts.list
 for FOLDER in $FOLDERS; do
-	CATEGORY=$(echo $FOLDER | sed 's|share/lair/||')
+	PRECATEGORY=$(echo $FOLDER | sed 's|share/lair/||')
+        CATEGORY=$(echo $PRECATEGORY | tr '_' ' ')
 	for FILE in $(find $FOLDER -name *.png); do
 		FPATH=$(echo $FILE | sed 's|share/lair|/usr/share/lair|')
 		echo $FPATH $CATEGORY default >> share/lair/images
