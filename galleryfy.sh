@@ -12,7 +12,7 @@ for f in $PNG_FOLDERS; do
         for g in $PNG_FILES; do
                 ALT_TAG=$(echo $g | sed 's|.png||' | tr "_" " ")
                 echo -n "![$ALT_TAG]" >> $OUTFILE
-                echo "($g)" >> $OUTFILE
+                echo "($f/$g)" >> $OUTFILE
         done
         markdown $OUTFILE > $OUTFILEHTML
         cd $START_FOLDER
