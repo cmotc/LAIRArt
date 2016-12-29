@@ -19,7 +19,7 @@ for f in $PNG_FOLDERS; do
 done
 
 rm $START_FOLDER/index.md
-for h in $(find $START_FOLDER/site -name "*.html"); do
+for h in $(find site -name "*.html"); do
         LINKNAME=$(echo $h | sed 's|site/share_lair_||' | tr "_" " " | sed 's|.html||')
         echo "[$LINKNAME]($h)" >> $START_FOLDER/index.md
 done
