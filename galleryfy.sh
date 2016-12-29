@@ -24,4 +24,4 @@ for h in $(find site -name *.html); do
         LINKNAME=$(echo $h | sed 's|site/share_lair_||' | tr "_" " " | sed 's|.html||')
         echo "[$LINKNAME]($h)" >> index.md
 done
-echo index.md > index.html
+markdown index.md > index.html
