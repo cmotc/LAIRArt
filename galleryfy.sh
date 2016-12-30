@@ -20,7 +20,8 @@ done
 
 #rm $START_FOLDER/index.md
 markdown README.md > index.html
-for h in $(find site ! -path . -name "*.html"); do
+for h in $(find site ! -path 'site/share_lair.html' -name "*.html" | sort); do
+        echo $h
         LINKNAME=$(echo $h | sed 's|site/share_lair_||' | tr "_" " " | sed 's|.html||')
         echo "  * [$LINKNAME]($h) " | markdown >> $START_FOLDER/index.html
         cat $h | sed 's|../||' >> $START_FOLDER/index.html
