@@ -23,6 +23,6 @@ markdown README.md > index.html
 for h in $(find site ! -path . -name "*.html"); do
         LINKNAME=$(echo $h | sed 's|site/share_lair_||' | tr "_" " " | sed 's|.html||')
         echo "  * [$LINKNAME]($h) " | markdown >> $START_FOLDER/index.html
-        cat $h >> $START_FOLDER/index.html
+        cat $h | sed 's|../||' >> $START_FOLDER/index.html
 done
 
