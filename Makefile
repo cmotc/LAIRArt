@@ -7,3 +7,7 @@ install:
 	cp -v share/lair/sounds.list /usr/share/lair
 	cp -v share/lair/fonts.list /usr/share/lair
 	chmod -Rv a+r /usr/share/lair/
+
+deb-pkg:
+	make
+	checkinstall
