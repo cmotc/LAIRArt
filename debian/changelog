@@ -1,0 +1,5 @@
+lairart (9.1-1) unstable; urgency=medium
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- lair repo key <problemsolver@openmailbox.org>  Sun, 19 Feb 2017 17:49:03 -0500
