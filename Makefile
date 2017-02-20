@@ -18,10 +18,11 @@ deb-pkg:
 	echo "generate a random map according to a more-or-less detailed and" >> description-pak
 	echo "flexible environment to play in." >> description-pak
 	echo "" >> description-pak
+	mkdir -p doc-pak
+	cp *.md doc-pak
 	checkinstall --deldoc=yes \
 		-Dy \
 		--install=no \
-		--review-control \
 		--pkgname="lairart" \
 		--pakdir=../ \
 		--require="libpng-tools" \
