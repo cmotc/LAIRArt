@@ -10,7 +10,7 @@ install:
 
 deb-pkg:
 	make
-	checkinstall
+	checkinstall -Dy --install=no --pakdir=../
 
 windows:
 	cp -Rv ${HOME}/Projects/lairart/share/lair/* ${HOME}/Projects/lair-msi/bin/lair/
