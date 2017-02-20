@@ -1,3 +1,0 @@
-./build_index.sh
-sort: cannot read: share/lair/sounds: No such file or directory
-rm: cannot remove 'share/lair/sounds': No such file or directory
