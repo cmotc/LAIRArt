@@ -27,7 +27,7 @@ deb-pkg:
 		--pakdir=../ \
 		--require="libpng-tools" \
 		--maintainer='problemsolver@openmailbox.org' \
-		--pkglicense='LICENSE.md' \
+		--pkglicense='LICENSE' \
 		--pkgrelease="1" \
 		--pkggroup="games" \
 		--pkgversion='0.9' \
