@@ -18,7 +18,6 @@ tarchive:
 	tar --exclude=.git -czvf ../lairart_$(VERSION).orig.tar.gz ./
 
 deb-pkg:
-	make
 	make tarchive
 	#echo "LAIR! Roguelike Game(Artistic Assets), version 0.9" > description-pak
 	#echo "" >> description-pak
