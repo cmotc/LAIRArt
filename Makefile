@@ -43,5 +43,8 @@ deb-pkg:
 	#	--pkgsource='./'
 	debuild
 
+clean:
+	rm *tgz \
+
 windows:
 	cp -Rv ${HOME}/Projects/lair-manifest/lairart/share/lair/* ${HOME}/Projects/lair-manifest/lair-msi/bin/lair/
