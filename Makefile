@@ -45,4 +45,4 @@ deb-pkg:
 	debuild
 
 windows:
-	cp -Rv ${HOME}/Projects/lairart/share/lair/* ${HOME}/Projects/lair-msi/bin/lair/
+	cp -Rv ${HOME}/Projects/lair-manifest/lairart/share/lair/* ${HOME}/Projects/lair-manifest/lair-msi/bin/lair/
