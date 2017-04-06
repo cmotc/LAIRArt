@@ -1,6 +1,6 @@
+include ../config.mk
 PREFIX = /
 MANPREFIX = $(PREFIX)/share/man
-VERSION = '0.9'
 COMMIT_MESSAGE = `date +'%y-%m-%d-%H-%M-%S'`
 
 dummy:
