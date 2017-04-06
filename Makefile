@@ -1,6 +1,6 @@
 PREFIX = /
 MANPREFIX = $(PREFIX)/share/man
-VERSION = '9.1'
+VERSION = '0.9'
 COMMIT_MESSAGE = `date +'%y-%m-%d-%H-%M-%S'`
 
 dummy:
