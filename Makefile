@@ -33,5 +33,8 @@ deb-upkg:
 clean:
 	rm -f *tgz
 
+release:
+	dch -v $(VERSION) "${COMMIT_MESSAGE}"
+
 windows:
 	cp -Rv ${HOME}/Projects/lair-manifest/lairart/share/lair/* ${HOME}/Projects/lair-manifest/lair-msi/bin/lair/
