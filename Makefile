@@ -25,6 +25,11 @@ deb-pkg:
 	make tarchive
 	debuild
 
+deb-upkg:
+	make build_index
+	make tarchive
+	debuild -us -uc
+
 clean:
 	rm -f *tgz
 
