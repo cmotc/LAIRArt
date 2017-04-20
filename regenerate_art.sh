@@ -5,6 +5,7 @@ for file in $(find /usr/share/digitalandy/skel/ -name *.txt); do
                 FOLDER=$(echo $file | sed 's|/usr/share/digitalandy/skel/||' | sed 's|.txt||')
                 echo share/lair/$FOLDER
                 VAR=0
+                rm share/lair/$FOLDER/*
                 mkdir -p "share/lair/$FOLDER"
                 while [ $VAR != 10 ]; do
                         dandy -incl=/usr/share/digitalandy/skel/colors.txt \
